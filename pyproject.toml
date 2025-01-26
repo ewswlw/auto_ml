@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "auto-ml"
+version = "0.1.0"
+description = ""
+authors = [" ewswlw <eddy.winiarz@gmail.com>"]
+readme = "README.md"
+packages = [{include = "auto_ml", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+blpapi = "^3.24.11"
+xbbg = "^0.7.7"
+plotly = "^5.24.1"
+jupyter = "^1.1.1"
+ipykernel = "^6.29.5"
+nbformat = "^5.10.4"
+ipywidgets = "^8.1.5"
+pandas = "<2.2.0"
+numpy = ">=1.21,<1.27"
+dask = {version = "2023.3.0", extras = ["complete"]}
+
+
+[[tool.poetry.source]]
+name = "bloomberg"
+url = "https://blpapi.bloomberg.com/repository/releases/python/simple/"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

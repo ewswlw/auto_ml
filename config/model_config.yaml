@@ -1,0 +1,30 @@
+# Version information
+version_name: "v1.0.0_AdaBoost_CDS_DT_Univariate_with_Exog_Monthly_CAD_OAS_12M_Season"
+version_description: >
+  Version 1.0.0
+  Model: AdaBoost with Conditional Deseasonalization and Detrending
+  Type: Univariate with Exogenous Variables
+  Target: CAD OAS
+  Frequency: Monthly
+  Seasonality: 12 months
+  Features: All available as exogenous variables
+  Cross-validation: Expanding window
+  Forecast Horizon: 1 month ahead
+
+# Data configuration
+data_path: 'csv_outputs/monthly_oas_pycaret.csv'
+
+# Model parameters
+model_params:
+  target: 'cad_oas'
+  forecast_horizon: 1
+  seasonal_period: 12
+  fold_strategy: 'expanding'
+  fold_number: 3
+  transform_target: null
+  session_id: 123
+
+# Output configuration
+output_dir: 'outputs/pycaret_model/v1.0.0_AdaBoost_CDS_DT_Monthly_CAD_OAS_12M_Season'
+save_artifacts: true
+create_visualizations: true
